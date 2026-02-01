@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Appexy--Tailwind Project</title>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
+
+    <!--! Start of Nav -->
+    <nav class="flex justify-between items-center px-10 py-6">
+
+        <!--? Title -->
+        <div class="title text-3xl text-gray-800 dark:text-white font-semibold">
+            <h1 class="uppercase"><span class="text-blue-900">A</span>ppexy</h1>
+        </div>
+
+        <!--? Nav Elments -->
+        <div class="navElements ml-31">
+            <ul class="flex justify-around items-center gap-7 text-gray-800 dark:text-gray-100
+            font-normal">
+                <li><a href="#" class="text-blue-600 border-b-2
+                    border-blue-600 dark:text-blue-400 dark:border-blue-400 pb-1 ">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Screenshot</a></li>
+                <li><a href="#">Testimonial</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!--? Logins and Modes -->
+        <div class="signs-in/up & Modes flex items-center gap-3">
+            <!--? Toggle Modes -->
+            <label class="inline-flex items-center cursor-pointer mr-12">
+                <input type="checkbox" id="darkToggle" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer
+focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full 
+peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:
+translate-x-full peer-checked:after:border-white after:content-[''] after:absolute 
+after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border 
+after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 
+peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+            </label>
+
+            <!--? Signs Btn -->
+            <div class="btns flex items-center gap-5 text-gray-800 dark:text-gray-100">
+                <a class="cursor-pointer">Login</a>
+                <a class="bg-blue-600 px-4 py-2 text-white rounded-md hover:bg-blue-700 cursor-pointer">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+    <!--! End of Nav -->
+
+    <!--! Hero Section -->
+    <section class="heroSection flex justify-between px-10 items-center h-[80vh] gap-5">
+
+        <!--? Left Section -->
+        <div class="leftSection">
+
+            <!--? Main Title -->
+            <div class="Titles text-5xl font-medium">
+                <h2 class="capitalize text-gray-800 dark:text-gray-100 leading-20 ">
+                    manage your activity
+                </h2>
+                <h2 class="capitalize text-gray-800 dark:text-gray-100 ">
+                    with <span class="text-blue-600 uppercase">Appexy</span>
+                </h2>
+            </div>
+
+            <!--? Sub-Title -->
+            <div class="sub-title mt-7 text-[18px]">
+                <p class="text-gray-600 dark:text-gray-400 capitalize leading-6">
+                    Maecenas tempus, tellus eget condimentum rhoncus quam semper libero vel
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 capitalize leading-6">
+                    sit amet adipiscing sem neque sed ipsum nam quam nunc blandit luctus
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 capitalize">
+                    pulvinar.
+                </p>
+            </div>
+
+            <!--? Btns -->
+            <div class="btns mt-10 flex items-center gap-5">
+                <a href="#" class="capitalize text-white font-medium 
+                bg-blue-600 px-7 py-3 rounded-md hover:bg-blue-700 transition">Get started
+                    today</a>
+                <a href="#" class="capitalize text-gray-800 dark:text-white border 
+                    border-gray-400 dark:border-gray-500 font-medium px-5 py-3 
+                    rounded-md hover:bg-gray-500 hover:text-white transition">download
+                    app</a>
+            </div>
+        </div>
+
+        <!--? Right Section -->
+        <div class="rightSection w-90 mt-20">
+            <img src="images/hero-2-img.e00536899165fc0261f3.png" class="" alt="hero section img " />
+
+        </div>
+    </section>
+
+    <!--! feature Section -->
+    <section class="featureSection mt-20 mb-20">
+        <!--? title -->
+        <div class="title">
+            <h3 class="text-center text-gray-600 dark:text-gray-400">Our Features</h3>
+        </div>
+
+        <!--? sub-title -->
+        <div class="sub-title">
+            <h2 class="mt-5 text-[40px] text-gray-800 dark:text-gray-100 capitalize text-center">smart solutions for
+                busy people</h2>
+        </div>
+
+        <!--? texts -->
+        <div class="texts">
+            <p class="text-gray-400 dark:text-gray-400 capitalize text-center">Sed ut perspiciatis unde omnis iste natus
+                error voluptatem accusantium</p>
+            <p class="text-gray-400 dark:text-gray-400 capitalize text-center">doloremque rem aperiam.</p>
+        </div>
+
+        <!--? Content -->
+        <div class="content flex justify-between px-25 gap-10 mt-10">
+
+            <!--? Left Section -->
+            <div class="leftSection flex justify-start w-1/2">
+                <img src="images/features-1.bc7b2e31dc2030c17a64.png" class="w-100" alt="Feature Image">
+            </div>
+
+            <!--? Right Section -->
+            <div class="RightSection w-1/2 space-y-6">
+                <!--? Title -->
+                <div class="rightSection-Title text-center text-3xl text-gray-800 dark:text-gray-100">
+                    <h3>Discover your destination </h3>
+                </div>
+                <!--? Sub Title -->
+                <div class="rightSection-sub-title text-gray-400 dark:text-gray-400">
+                    <p> On the other hand, we denounce with righteous indignation so blinded that they cannot.</p>
+                </div>
+                <!--? Features Content -->
+                <div class="content-features flex flex-col gap-15 mt-10">
+
+                    <!-- ? Bullet 1 -->
+                    <div class="fea1 flex items-center gap-5">
+                        <div
+                            class="w-10 h-10 shrink-0 rounded-full shadow-xl bg-gray-100 dark:bg-white flex items-center justify-center">
+                            <i class="fa-solid fa-check text-blue-600"></i>
+                        </div>
+                        <div class="fea-content">
+                            <p class="capitalize">Systematic audits perform a <span
+                                    class="text-blue-600 font-bold capitalize">thorough security check to
+                                    identify vulnerabilities </span> and validate that all safety
+                                measures.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ? Bullet 2 -->
+                    <div class="fea2 flex items-center gap-5">
+                        <div
+                            class="w-10 h-10 shrink-0 rounded-full shadow-xl bg-gray-100 dark:bg-white flex items-center justify-center">
+                            <i class="fa-solid fa-layer-group text-blue-600"></i>
+                        </div>
+                        <div class="fea-content">
+                            <p class="capitalize">
+                                <span class="text-blue-600 font-semibold"> Our architecture utilizes multiple defense
+                                    layers</span> to protect sensitive data through
+                                redundant encryption and active network monitoring.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ? Bullet 3 -->
+                    <div class="fea3 flex items-center gap-5">
+                        <div
+                            class="w-10 h-10 shrink-0 rounded-full shadow-xl bg-gray-100 dark:bg-white flex items-center justify-center">
+                            <i class="fa-solid fa-lock text-blue-600"></i>
+                        </div>
+                        <div class="fea-content">
+                            <p class="capitalize">
+                                Strict access protocols ensure that every digital entryway remains firmly locked against
+                                <span class="text-blue-600 font-semibold">unauthorized intrusion attempts at all times</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--! Script Paths -->
+    <script src="js/script.JS"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+        integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+</body>
+
+</html>
