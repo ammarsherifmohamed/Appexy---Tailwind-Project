@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/output.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,15 +15,17 @@
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
     <!--! Start of Nav -->
-    <nav class="flex justify-between items-center px-10 py-6">
+    <nav class="flex justify-between items-center px-10 py-4 sticky top-0 backdrop-blur-sm z-20">
 
         <!--? Title -->
-        <div class="title text-3xl text-gray-800 dark:text-white font-semibold">
+        <div class="title flex items-center gap-2 text-3xl text-gray-800 dark:text-white font-semibold">
+            <img src="images/icon.png" alt="Logo Img" class="w-8">
             <h1 class="uppercase"><span class="text-blue-900">A</span>ppexy</h1>
+            <!-- <img src="images/logo-dark.png" alt="Logo Img"> -->
         </div>
 
         <!--? Nav Elments -->
-        <div class="navElements ml-31">
+        <div class="navElements hidden md:block ml-31">
             <ul class="flex justify-around items-center gap-7 text-gray-800 dark:text-gray-100
             font-normal">
                 <li><a href="#" class="text-blue-600 border-b-2
@@ -36,7 +39,7 @@
         </div>
 
         <!--? Logins and Modes -->
-        <div class="signs-in/up & Modes flex items-center gap-3">
+        <div class="signs-in/up & Modes flex flex-row items-center gap-3">
             <!--? Toggle Modes -->
             <label class="inline-flex items-center cursor-pointer mr-12">
                 <input type="checkbox" id="darkToggle" class="sr-only peer">
@@ -50,23 +53,25 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
             </label>
 
             <!--? Signs Btn -->
-            <div class="btns flex items-center gap-5 text-gray-800 dark:text-gray-100">
+            <div class="btns flex flex-col md:flex-row items-center gap-5 text-gray-800 dark:text-gray-100">
                 <a class="cursor-pointer">Login</a>
-                <a class="bg-blue-600 px-4 py-2 text-white rounded-md hover:bg-blue-700 cursor-pointer">Sign Up</a>
+                <a
+                    class="bg-blue-600 text-[11px] md:text-[15px] p-1 w-12 md:w-25 text-center md:px-4 md:py-2 text-white rounded-md hover:bg-blue-700 cursor-pointer">Sign
+                    Up</a>
             </div>
         </div>
     </nav>
     <!--! End of Nav -->
 
     <!--! Hero Section -->
-    <section class="heroSection flex justify-between px-10 items-center h-[80vh] gap-5">
+    <section class="heroSection flex flex-col md:flex-row md:justify-between px-10 items-center h-[80vh] gap-5">
 
         <!--? Left Section -->
         <div class="leftSection">
 
             <!--? Main Title -->
-            <div class="Titles text-5xl font-medium">
-                <h2 class="capitalize text-gray-800 dark:text-gray-100 leading-20 ">
+            <div class="Titles text-4xl md:text-5xl font-medium">
+                <h2 class="capitalize text-gray-800 dark:text-gray-100 leading-15 md:leading-20 ">
                     manage your activity
                 </h2>
                 <h2 class="capitalize text-gray-800 dark:text-gray-100 ">
@@ -75,11 +80,13 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
             </div>
 
             <!--? Sub-Title -->
-            <div class="sub-title mt-7 text-[18px]">
+            <div class="sub-title mt-7 text-[13px] md:text-[18px]">
                 <p class="text-gray-600 dark:text-gray-400 capitalize leading-6">
                     Maecenas tempus, tellus eget condimentum rhoncus quam semper libero vel
+                    <!--? Responsive -->
+                    <span class="md:hidden">sit amet adipiscing sem neque sed ipsum nam quam nunc blandit luctus </span>
                 </p>
-                <p class="text-gray-600 dark:text-gray-400 capitalize leading-6">
+                <p class="hidden md:block text-gray-600 dark:text-gray-400 capitalize leading-6">
                     sit amet adipiscing sem neque sed ipsum nam quam nunc blandit luctus
                 </p>
                 <p class="text-gray-600 dark:text-gray-400 capitalize">
@@ -88,26 +95,36 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
             </div>
 
             <!--? Btns -->
-            <div class="btns mt-10 flex items-center gap-5">
-                <a href="#" class="capitalize text-white font-medium 
+            <div class="btns mt-10 flex flex-col items-center md:flex-row md:items-center gap-5">
+                <a href="#" class="hidden md:block capitalize text-white font-medium 
                 bg-blue-600 px-7 py-3 rounded-md hover:bg-blue-700 transition">Get started
                     today</a>
-                <a href="#" class="capitalize text-gray-800 dark:text-white border 
+
+                <!--? Responsive -->
+                <a href="#" class="md:hidden capitalize text-white font-medium 
+                bg-blue-600 w-45 text-center px-2 py-2 rounded-md hover:bg-blue-700 transition">Get started
+                    today</a>
+                <a href="#" class="hidden md:block capitalize text-gray-800 dark:text-white border 
                     border-gray-400 dark:border-gray-500 font-medium px-5 py-3 
                     rounded-md hover:bg-gray-500 hover:text-white transition">download
+                    app</a>
+                <!--? Responsive -->
+                <a href="#" class="md:hidden capitalize text-gray-800 dark:text-white border 
+                    border-gray-400 dark:border-gray-500 font-medium
+                    rounded-md w-45 text-center px-2 py-2 hover:bg-gray-500 hover:text-white transition">download
                     app</a>
             </div>
         </div>
 
         <!--? Right Section -->
-        <div class="rightSection w-90 mt-20">
+        <div class="rightSection w-80 md:w-90 mt-10 md:mt-20">
             <img src="images/hero-2-img.e00536899165fc0261f3.png" class="" alt="hero section img " />
 
         </div>
     </section>
 
     <!--! feature Section -->
-    <section class="featureSection mt-20 mb-20">
+    <section class="featureSection mt-130 md:mt-20 mb-20">
         <!--? title -->
         <div class="title uppercase">
             <h3 class="text-center text-gray-600 dark:text-gray-400">Our <span class="font-semibold">Features</span>
@@ -116,29 +133,32 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
 
         <!--? sub-title -->
         <div class="sub-title">
-            <h2 class="mt-5 text-[40px] text-gray-800 dark:text-gray-100 capitalize text-center">smart solutions for
+            <h2 class="mt-5 text-[25px] md:text-[40px] text-gray-800 dark:text-gray-100 capitalize text-center">smart
+                solutions for
                 busy people</h2>
         </div>
 
         <!--? texts -->
-        <div class="texts">
+        <div class="texts text-[11px] md:text-[15px]">
             <p class="text-gray-700 dark:text-gray-400 text-center">Sed ut perspiciatis unde omnis iste natus
-                error voluptatem accusantium</p>
-            <p class="text-gray-700 dark:text-gray-400 text-center">doloremque rem aperiam.</p>
+                error voluptatem accusantium
+                <span class="md:hidden">doloremque rem aperiam.</span>
+            </p>
+            <p class="hidden md:block text-gray-700 dark:text-gray-400 text-center">doloremque rem aperiam.</p>
         </div>
 
         <!--? Content -->
-        <div class="content flex justify-between px-25 gap-10 mt-10">
+        <div class="content flex flex-col md:flex-row items-center md:justify-between px-5 md:px-25 gap-10 mt-10">
 
             <!--? Left Section -->
-            <div class="leftSection flex justify-start w-1/2">
-                <img src="images/features-1.bc7b2e31dc2030c17a64.png" class="w-100" alt="Feature Image">
+            <div class="leftSection flex justify-start md:w-1/2">
+                <img src="images/features-1.bc7b2e31dc2030c17a64.png" class="w-[400%] md:w-100" alt="Feature Image">
             </div>
 
             <!--? Right Section -->
-            <div class="RightSection w-1/2 space-y-6">
+            <div class="RightSection md:w-1/2 space-y-6">
                 <!--? Title -->
-                <div class="rightSection-Title text-center text-3xl text-gray-800 dark:text-gray-100">
+                <div class="rightSection-Title text-center text-[25px] md:text-3xl text-gray-800 dark:text-gray-100">
                     <h3>Discover your destination </h3>
                 </div>
                 <!--? Sub Title -->
@@ -226,10 +246,10 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
         </div>
 
         <!--? Content-cards -->
-        <div class="cards flex gap-5 items-center justify-around mt-5">
+        <div class="cards grid grid-cols-1 lg:grid-cols-3 gap-5 items-center m-5 mt-5">
 
             <!-- ? First Card -->
-            <div class="card flex flex-col gap-10 bg-white shadow-xl px-10 py-10 rounded-md">
+            <div class="card gap-10 bg-white shadow-xl px-10 py-10 rounded-md">
                 <div class="plan-1 bg-blue-50 py-6 px-20 rounded-md flex flex-col justify-center items-center">
                     <p class="text-[20px] capitalize text-gray-900">free</p>
                     <div class="price text-3xl">
@@ -255,13 +275,13 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                 </div>
                 <!--? Btn -->
                 <div
-                    class="btn cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
+                    class="btn mt-6 cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
                     <button class="capitalize cursor-pointer text-white">choose plan</button>
                 </div>
             </div>
 
             <!-- ? Second Card -->
-            <div class="card relative flex flex-col gap-10 bg-white shadow-xl px-10 py-10 rounded-md overflow-hidden">
+            <div class="card relative gap-10 bg-white shadow-xl px-10 py-10 rounded-md overflow-hidden">
                 <div class="absolute top-[36px] translate-x-[10px] right-[-25px] shadow-lg rotate-45 w-42.5 
                     font-medium text-center bg-red-500 py-0.5 text-white capitalize">
                     <p>most popular</p>
@@ -291,13 +311,13 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                 </div>
                 <!--? Btn -->
                 <div
-                    class="btn cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
+                    class="btn mt-6 cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
                     <button class="capitalize cursor-pointer text-white">choose plan</button>
                 </div>
             </div>
 
             <!-- ? Third Card -->
-            <div class="card flex flex-col gap-10 bg-white shadow-xl px-10 py-10 rounded-md">
+            <div class="card gap-10 bg-white shadow-xl px-10 py-10 rounded-md">
                 <div class="plan-1 bg-blue-50 py-6 px-20 rounded-md flex flex-col justify-center items-center">
                     <p class="text-[20px] capitalize text-gray-900">Enterprise</p>
                     <div class="price text-3xl">
@@ -323,7 +343,7 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                 </div>
                 <!--? Btn -->
                 <div
-                    class="btn cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
+                    class="btn mt-6 cursor-pointer text-gray-900 dark:text-gray-900 flex justify-center py-2 rounded-md bg-gradient-to-l from-blue-100 via-blue-400 to-blue-500">
                     <button class="capitalize cursor-pointer text-white">choose plan</button>
                 </div>
             </div>
@@ -332,7 +352,7 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
     <!--! End of pricing section -->
 
     <!--! Contact Section -->
-    <section class="mt-30 bg-gray-100 py-20">
+    <section class="mt-30 bg-gray-100 dark:bg-gray-900 py-20">
         <div class="title uppercase text-gray-800 dark:text-gray-100 text-center">
             <h2>our <span class="font-medium">contact us</span></h2>
         </div>
@@ -344,9 +364,9 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
             <p>doloremque rem aperiam.</p>
         </div>
         <!--? Content -->
-        <div class="container flex justify-between">
+        <div class="container flex md:flex-row md:justify-between flex-col items-center ">
             <!--? Contact -->
-            <section class="w-1/2 flex flex-col items-start p-20">
+            <section class="md:w-1/2 flex flex-col items-start p-20">
                 <!--? Titles -->
                 <div class="title flex gap-10 items-center">
                     <img src="images/hello-icon.718e70c41c3ef320beb6.png" class="w-20" alt="Contact Img">
@@ -412,48 +432,50 @@ peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                 </div>
             </section>
             <!--? Form -->
-            <section class="w-1/2 bg-white py-10 px-10 mt-30 rounded-2xl h-160 shadow-2xl">
+            <section class=" bg-white dark:bg-gray-800 py-10 px-10 m-2 mt-13 rounded-2xl h-200 md:h-160 shadow-2xl">
                 <form class="flex flex-col gap-10">
-                    <div class="flex items-center gap-5">
+                    <div class="flex flex-col md:flex-row items-center gap-5">
                         <div class="flex flex-col gap-1">
                             <label for="firstName" class=" text-gray-500 font-medium">First Name</label>
                             <input type="text" name="firstName" id="" placeholder="Your First Name..."
-                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-70">
+                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-70">
                         </div>
                         <div class="flex flex-col gap-1">
                             <label for="lastName" class=" text-gray-500 font-medium">Last Name</label>
                             <input type="text" name="lastName" id="" placeholder="Your Last Name..."
-                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-70">
+                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-70">
                         </div>
                     </div>
-                    <div class="flex items-center gap-5">
+                    <div class="flex flex-col md:flex-row items-center gap-5">
                         <!-- ? inputs -->
                         <div class="flex flex-col gap-1">
                             <label for="emailAddress" class=" text-gray-500 font-medium">Email Address</label>
                             <input type="Email" name="emailAddress" id="" placeholder="Your Email..."
-                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-70">
+                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-70">
                         </div>
                         <!-- ? inputs -->
                         <div class="flex flex-col gap-1">
                             <label for="number" class=" text-gray-500 font-medium">Phone Number</label>
                             <input type="text" name="number" id="" placeholder="Your Phone..."
-                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-70">
+                                class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-70">
                         </div>
                     </div>
                     <!-- ? Subject -->
                     <div class="flex flex-col gap-1">
                         <label for="subject" class=" text-gray-500 font-medium">Subject</label>
                         <input type="text" name="subject" id="" placeholder="Type Subject..."
-                            class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-145">
+                            class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-145">
                     </div>
                     <!-- ? textArea -->
                     <div class="flex flex-col gap-1">
                         <label for="massage" class=" text-gray-500 font-medium">Masseges</label>
                         <textarea name="massage" id="" placeholder="Type Messages..."
-                            class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-145 max-h-30 min-h-30"></textarea>
+                            class="border border-gray-300 outline-0 py-1 pl-3 pr-5 rounded w-full md:w-145 max-h-30 min-h-30"></textarea>
                     </div>
                     <div>
-                        <button class="cursor-pointer bg-gradient-to-r from-red-600 via-red-400 to-red-100 px-10 py-2.5 rounded-md text-white font-medium text-[17px] capitalize">send messages <i class="fa-solid fa-paper-plane"></i></button>
+                        <button
+                            class="cursor-pointer bg-gradient-to-r from-red-600 via-red-400 to-red-100 px-10 py-2.5 rounded-md text-white font-medium text-[17px] capitalize">send
+                            messages <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </form>
             </section>
